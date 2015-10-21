@@ -4,11 +4,6 @@ int gameState;
 PImage background1,background2,ending1Img,ending2Img,enemyImg,jetImg,hpImg,treasureImg,starting1Img,starting2Img
        ,elementGainbomb,electmentEnemy;
 float hp,treasureX,treasureY,enemyX,enemyY,backgroundX,jetX,jetY;
-float enemySpeed=5;
-float distance=dist(jetX,jetY,enemyX,enemyY);
-float a=enemySpeed/distance;
-
-
 boolean  starting1=true;
 boolean  starting2=false;
 boolean  ending1=false;
@@ -18,15 +13,10 @@ boolean  downPressed=false;
 boolean  leftPressed=false;
 boolean  rightPressed=false;
 
-
-
-
-
 void setup () {
   
   size(640,480) ; 
-  gameState=GAME_START;
-  
+  gameState=GAME_START;  
   background1=loadImage("img/bg1.png");
   background2=loadImage("img/bg2.png");
   ending1Img=loadImage("img/end1.png");
@@ -39,25 +29,18 @@ void setup () {
   starting2Img=loadImage("img/start2.png");
   elementGainbomb=loadImage("img/Moocs-element-gainbomb.png");
   electmentEnemy=loadImage("img/Moocs-element-enemy1.png");
-  
-   
-  
+    
   //treasure
   treasureX=random(200,500);
   treasureY=random(50,425);
   
   //enemy  
-  enemyY=random(50,400);
-  
+  enemyY=random(50,400); 
   
   //jet
   jetX=589;
   jetY=215;
-  
-  
-  
-  
- }
+  }
 
 
 void draw() {
@@ -159,10 +142,8 @@ void draw() {
     if((jetY-enemyY)/50>=0.03){
       enemyY+=0.03;}
       else{
-      enemyY+=0.01;}
-    
-   
-      
+      enemyY+=0.01;}   
+         
    //treasure
    image(treasureImg,treasureX,treasureY);
    //treasure replace
@@ -204,7 +185,6 @@ void draw() {
    break;
    }     
 }
-
       
 void keyPressed(){
   if(key==CODED){
@@ -223,8 +203,7 @@ void keyPressed(){
        break;
           }
         }    
-      }
-      
+      }      
       
 void keyReleased(){
   if(key==CODED){
