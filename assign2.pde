@@ -133,7 +133,7 @@ void draw() {
      }
    }
    // the enemy rushs toward the jet 
-    if(enemyX<=jetX+61){
+    if(enemyX<=jetX+51){
      enemyX+=(jetX-enemyX)/40;
      enemyY+=(jetY-enemyY)/40;}
    
