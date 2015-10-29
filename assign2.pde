@@ -135,14 +135,9 @@ void draw() {
    // the enemy rushs toward the jet 
     if(enemyX<=jetX){
      enemyX+=(jetX-enemyX)/100;
-     if((jetX-enemyX)/50>=0.03){
-       enemyX+=0.03;}
-    }
-    enemyY+=(jetY-enemyY)/100;
-    if((jetY-enemyY)/50>=0.03){
-      enemyY+=0.03;}
-      else{
-      enemyY+=0.01;}   
+     enemyY+=(jetY-enemyY)/100;}
+   
+        
          
    //treasure
    image(treasureImg,treasureX,treasureY);
