@@ -133,9 +133,9 @@ void draw() {
      }
    }
    // the enemy rushs toward the jet 
-    if(enemyX<=jetX){
-     enemyX+=(jetX-enemyX)/100;
-     enemyY+=(jetY-enemyY)/100;}
+    if(enemyX<=jetX+10){
+     enemyX+=(jetX-enemyX)/100;}
+     enemyY+=(jetY-enemyY)/100;
    
         
          
