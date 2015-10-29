@@ -126,16 +126,16 @@ void draw() {
    enemyY=random(85,400);}
    //jet run into enemy
    if( enemyY>=jetY-51 && enemyY<=jetY+51){
-     if(enemyX+51>=jetX && enemyX-41<=jetX){
+     if(enemyX+51>=jetX && enemyX-51<=jetX){
      enemyX=0;
      enemyY=random(85,400);
      hp-=39;      
      }
    }
    // the enemy rushs toward the jet 
-    if(enemyX<=jetX+51){
-     enemyX+=(jetX-enemyX)/50;}
-     enemyY+=(jetY-enemyY)/50; 
+    if(enemyX<=jetX+61){
+     enemyX+=(jetX-enemyX)/40;
+     enemyY+=(jetY-enemyY)/40;}
    
         
          
